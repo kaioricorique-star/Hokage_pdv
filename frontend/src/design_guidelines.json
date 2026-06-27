@@ -1,0 +1,117 @@
+﻿Action: {"type": "mcp_tool", "tool_name": "mcp_view_bulk", "tool_arguments": {"paths": ["/app/design_guidelines.json"]}}
+Observation: ===FILE: /app/design_guidelines.json
+/app/design_guidelines.json:
+1|{
+2|  "theme": "Light",
+3|  "archetype": "Archetype 4: Swiss & High-Contrast (Operational Focus)",
+4|  "emotional_tone": "Objective, rigid, high-clarity, and functional",
+5|  "language": "pt-BR",
+6|  "typography": {
+7|    "fonts": {
+8|      "headings": "Chivo",
+9|      "body": "IBM Plex Sans",
+10|      "mono": "JetBrains Mono"
+11|    },
+12|    "hierarchy": {
+13|      "h1": "text-4xl sm:text-5xl lg:text-6xl tracking-tighter leading-none font-black",
+14|      "h2": "text-2xl sm:text-3xl lg:text-4xl tracking-tight leading-none font-bold",
+15|      "h3": "text-xl sm:text-2xl tracking-tight leading-snug font-bold",
+16|      "h4": "text-lg sm:text-xl tracking-tight leading-snug font-semibold",
+17|      "body": "text-base leading-relaxed",
+18|      "small": "text-sm leading-normal",
+19|      "overline": "text-xs uppercase tracking-[0.2em] font-semibold"
+20|    }
+21|  },
+22|  "colors": {
+23|    "background": {
+24|      "default": "#F5F5F4",
+25|      "paper": "#FFFFFF",
+26|      "dark_mode_optional": "#0A0A0A"
+27|    },
+28|    "primary": {
+29|      "main": "#0A0A0A",
+30|      "hover": "#262626",
+31|      "foreground": "#FFFFFF"
+32|    },
+33|    "accent": {
+34|      "main": "#DC2626",
+35|      "hover": "#B91C1C",
+36|      "foreground": "#FFFFFF"
+37|    },
+38|    "signals": {
+39|      "success": "#16A34A",
+40|      "warning": "#D97706",
+41|      "destructive": "#DC2626",
+42|      "info": "#2563EB"
+43|    },
+44|    "neutrals": {
+45|      "text_primary": "#171717",
+46|      "text_secondary": "#525252",
+47|      "border": "#E5E5E5"
+48|    }
+49|  },
+50|  "layout_and_spacing": {
+51|    "philosophy": "High density for operational interfaces (POS, KDS) and generous bento grids for admin dashboards.",
+52|    "container_padding": "p-4 sm:p-6 lg:p-8",
+53|    "grid_modes": {
+54|      "dashboard": "grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4",
+55|      "pos": "grid-cols-12 gap-2 (7 cols products, 5 cols cart)",
+56|      "kds": "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 (Masonry or fixed row KDS cards)"
+57|    },
+58|    "radius": "rounded-none sm:rounded-sm",
+59|    "borders": "border border-neutral-200"
+60|  },
+61|  "components": {
+62|    "cards": {
+63|      "style": "Flat background, sharp edges (max 4px radius), 1px solid border, no shadow.",
+64|      "hover": "Hover state adds -translate-y-[2px] and shadow-sm."
+65|    },
+66|    "buttons": {
+67|      "primary": "Solid black, square edges, high contrast white text.",
+68|      "secondary": "Transparent background, 1px black border.",
+69|      "destructive": "Solid red (#DC2626)."
+70|    },
+71|    "kds_tickets": {
+72|      "layout": "Ticket-first layout. Bold header (table/time), color-coded top border for urgency (green > yellow > red), item list with modifiers indented.",
+73|      "actions": "Tap-to-bump, large touch targets for kitchen staff."
+74|    },
+75|    "pos_interface": {
+76|      "layout": "Progressive disclosure. Categorized grid for fast tap, right-hand fixed cart. Dark mode toggle for terminal.",
+77|      "items": "Image-led with large hit areas, bold price tags."
+78|    }
+79|  },
+80|  "media": {
+81|    "guidelines": "Use high-quality imagery for marketing or placeholders. Keep operational UI text-heavy and scannable.",
+82|    "images": [
+83|      {
+84|        "category": "marketing_hero",
+85|        "description": "Busy restaurant kitchen showing operations",
+86|        "url": "https://images.unsplash.com/photo-1622021142947-da7dedc7c39a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTF8MHwxfHNlYXJjaHwxfHxidXN5JTIwcmVzdGF1cmFudCUyMGtpdGNoZW58ZW58MHx8fHwxNzgyMDczMTAxfDA&ixlib=rb-4.1.0&q=85"
+87|      },
+88|      {
+89|        "category": "product_sample",
+90|        "description": "Gourmet burger for POS mockup",
+91|        "url": "https://images.pexels.com/photos/34491414/pexels-photo-34491414.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+92|      },
+93|      {
+94|        "category": "product_sample_2",
+95|        "description": "Another burger variation",
+96|        "url": "https://images.pexels.com/photos/5179783/pexels-photo-5179783.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+97|      }
+98|    ]
+99|  },
+100|  "motion": {
+101|    "general": "Minimalist. Fast micro-interactions for feedback.",
+102|    "hover": "transition-all duration-200 ease-in-out",
+103|    "kds_bump": "Framer motion exit animation (slide up and fade out)."
+104|  },
+105|  "testing": {
+106|    "attributes": "All interactive and key informational elements MUST include a `data-testid` attribute. Convention: kebab-case, role-based."
+107|  },
+108|  "accessibility": {
+109|    "contrast": "Minimum 4.5:1 for text. High contrast mode support.",
+110|    "motion": "Respect prefers-reduced-motion."
+111|  }
+112|}
+
+===END
