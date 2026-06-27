@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "rewrites": [
-    {
-      "source": "/api/(.*)",
-      "destination": "/backend/$1"
+  "experimentalServices": {
+    "frontend": {
+      "root": "front-end",
+      "routes": "/(.*)"
     },
-    {
-      "source": "/(.*)",
-      "destination": "/front-end/$1"
+    "backend": {
+      "root": "backend",
+      "routes": "/api/(.*)"
     }
-  ]
+  }
 }
