@@ -18,6 +18,10 @@
     "@craco/craco": "^7.1.0",
     "autoprefixer": "^10.4.0",
     "postcss": "^8.4.0",
-    "tailwindcss": "^3.4.0"
+    "tailwindcss": "^3.4.0",
+    "webpack-plugin": "^1.0.5",
+    "zod": "3.24.4",
+    "sonner": "2.0.3"
+  },
   }
 }
